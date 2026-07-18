@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import PublicLayout from "../layouts/PublicLayout";
+import PublicLayout from "../layouts/PublicLayoout";
 import AdminLayout from "../layouts/AdminLayout";
 
 import Home from "../pages/public/Home";

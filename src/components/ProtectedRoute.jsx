@@ -4,9 +4,11 @@ function ProtectedRoute({ children }) {
   const isAdmin =
     localStorage.getItem("isAdmin") === "true";
 
-  return isAdmin
-    ? children
-    : <Navigate to="/" />;
+  if (!isAdmin) {
+    return <Navigate to="/" />;
+  }
+
+  return children;
 }
 
 export default ProtectedRoute;
