@@ -6,9 +6,8 @@ import AdminLayout from "../layouts/AdminLayout";
 import Home from "../pages/public/Home";
 import Products from "../pages/public/Products";
 import Cart from "../pages/public/Cart";
-
 import Dashboard from "../pages/admin/Dashboard";
-
+import AddProduct from "../pages/admin/AddProduct";
 import ProtectedRoute from "../components/ProtectedRoute";
 
 const router = createBrowserRouter([
@@ -43,10 +42,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <Dashboard />
-      }
+        element: <Dashboard />,
+      },
+      {
+        path: "add-product",
+        element: <AddProduct />,
+      },
     ]
   }
 ]);
 
 export default router;
+
+
+
+

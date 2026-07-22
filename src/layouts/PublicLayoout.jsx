@@ -2,18 +2,14 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function PublicLayout() {
+export default function PublicLayout() {
   return (
     <>
       <Navbar />
-
-      <main style={{ padding: "20px" }}>
+      <main className="container">
         <Outlet />
       </main>
-
       <Footer />
     </>
   );
 }
-
-export default PublicLayout;

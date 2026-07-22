@@ -22,6 +22,12 @@ function Sidebar() {
       </p>
 
       <p>
+        <Link to="/admin/add-product" style={{ color: "white" }}>
+          Add Product
+        </Link>
+      </p>
+
+      {/* <p>
         <Link to="/admin/products" style={{ color: "white" }}>
           Products
         </Link>
@@ -31,9 +37,16 @@ function Sidebar() {
         <Link to="/admin/orders" style={{ color: "white" }}>
           Orders
         </Link>
-      </p>
+      </p> */}
     </div>
   );
 }
 
 export default Sidebar;
+
+
+
+
+
+
+
