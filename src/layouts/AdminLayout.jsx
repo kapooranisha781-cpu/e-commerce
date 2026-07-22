@@ -3,14 +3,13 @@ import Sidebar from "../components/Sidebar";
 
 function AdminLayout() {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="admin-layout">
       <Sidebar />
 
-      <div style={{ flex: 1, padding: "20px" }}>
+      <div className="admin-content">
         <Outlet />
       </div>
     </div>
   );
 }
-
 export default AdminLayout;
