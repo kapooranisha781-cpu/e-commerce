@@ -1,50 +1,81 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+
 import { getProducts } from "../../api/productApi";
 import ProductCard from "../../components/ProductCard";
 import SearchBar from "../../components/SearchBar";
 import useDebounce from "../../hooks/useDebounce";
+
+import "../../style/Products.css";
 
 function Products() {
   const [search, setSearch] = useState("");
 
   const debouncedSearch = useDebounce(search, 500);
 
-  const { data = [], isLoading, isError } = useQuery({
+  const {
+    data: products = [],
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ["products"],
     queryFn: getProducts,
   });
 
-  if (isLoading) return <h2>Loading Products...</h2>;
+  const filteredProducts = products.filter(({ title, brand, category }) => {
+    const keyword = debouncedSearch.toLowerCase();
 
-  if (isError) return <h2>Something went wrong!</h2>;
-
-  const filteredProducts = data.filter((product) => {
     return (
-      product.title.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
-      product.brand.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
-      product.category.toLowerCase().includes(debouncedSearch.toLowerCase())
+      title.toLowerCase().includes(keyword) ||
+      brand.toLowerCase().includes(keyword) ||
+      category.toLowerCase().includes(keyword)
     );
   });
 
+  if (isLoading) {
+    return (
+      <section className="loading-container">
+        <h2>Loading Products...</h2>
+      </section>
+    );
+  }
+
+  if (isError) {
+    return (
+      <section className="error-container">
+        <h2>Something went wrong!</h2>
+        <p>Please try again later.</p>
+      </section>
+    );
+  }
+
   return (
-    <div className="products-page">
+    <section className="products-page">
+
       <div className="products-header">
+
+        <span className="products-tag">
+          Premium Collection
+        </span>
+
         <h1>Explore Our Products</h1>
 
         <p>
-          Discover the latest smartphones, laptops, accessories, smartwatches,
-          cameras and more.
+          Discover premium smartphones, laptops, smartwatches,
+          headphones, cameras and accessories designed for
+          performance and style.
         </p>
 
         <SearchBar
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+
       </div>
 
       <div className="products-grid">
-        {filteredProducts.length > 0 ? (
+
+        {filteredProducts.length ? (
           filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
@@ -52,10 +83,17 @@ function Products() {
             />
           ))
         ) : (
-          <h2>No Products Found.</h2>
+          <div className="empty-products">
+            <h2>No Products Found</h2>
+            <p>
+              Try searching with another keyword.
+            </p>
+          </div>
         )}
+
       </div>
-    </div>
+
+    </section>
   );
 }
 

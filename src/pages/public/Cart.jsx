@@ -1,54 +1,81 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import CartItem from "../../components/CartItem";
+import "../../style/Cart.css";
 
 function Cart() {
   const { state, dispatch } = useContext(CartContext);
 
-  const total = state.cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+  // Total number of products
+  const totalItems = state.cart.reduce(
+    (sum, item) => sum + item.quantity,
     0
   );
 
+  // Total price after discount
+  const total = state.cart.reduce((sum, item) => {
+    const discountedPrice = Math.round(
+      item.price - (item.price * item.discount) / 100
+    );
+
+    return sum + discountedPrice * item.quantity;
+  }, 0);
+
   if (state.cart.length === 0) {
     return (
-      <div>
-        <h1>Shopping Cart</h1>
-        <p>No products added yet.</p>
+      <div className="empty-cart">
+        <h1>🛒 Your Cart is Empty</h1>
+        <p>Looks like you haven't added any products yet.</p>
       </div>
     );
   }
-    <div>
-      <h1>Shopping Cart</h1>
 
-      {state.cart.map((item) => (
-        <div
-          key={item.id}
-          style={{
-            border: "1px solid #ddd",
-            padding: "15px",
-            marginBottom: "10px",
-          }}
-        >
-          <h3>{item.title}</h3>
+  return (
+    <section className="cart-page">
+      <div className="cart-header">
+        <h1>Shopping Cart</h1>
+        <p>{totalItems} Item(s) in your cart</p>
+      </div>
 
-          <p>Price: ₹{item.price}</p>
+      <div className="cart-items">
+        {state.cart.map((item) => (
+          <CartItem
+            key={item.id}
+            item={item}
+          />
+        ))}
+      </div>
 
-          <p>Quantity: {item.quantity}</p>
+      <div className="cart-summary">
+        <h2>Order Summary</h2>
 
-          <p>Subtotal: ₹{item.price * item.quantity}</p>
-
-          <button
-            onClick={() =>
-              dispatch({
-                type: "REMOVE_FROM_CART",
-                payload: item.id,
-              })
-            }> Remove </button>
+        <div className="summary-row">
+          <span>Total Items</span>
+          <span>{totalItems}</span>
         </div>
-      ))}
-      <hr />
-      <h2>Total: ₹{total}</h2>
-    </div>
+
+        <div className="summary-row">
+          <span>Total Amount</span>
+          <strong>₹{total.toLocaleString()}</strong>
+        </div>
+
+        <button className="checkout-btn">
+          Proceed to Checkout
+        </button>
+
+        <button
+          className="clear-cart-btn"
+          onClick={() =>
+            dispatch({
+              type: "CLEAR_CART",
+            })
+          }
+        >
+          Clear Cart
+        </button>
+      </div>
+    </section>
+  );
 }
 
 export default Cart;

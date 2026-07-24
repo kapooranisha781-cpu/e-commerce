@@ -1,0 +1,39 @@
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.search-bar input:focus {
+    border-color: #8A5B36;
+    box-shadow: 0 0 8px rgba(138, 91, 54, 0.2);
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8A5B36;
+    font-size: 18px;
+}

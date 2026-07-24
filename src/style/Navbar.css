@@ -1,0 +1,256 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f6f3;
+    color:#222;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.navbar-container{
+    width:90%;
+    max-width:1400px;
+    height:80px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+    text-decoration:none;
+    font-size:32px;
+    font-weight:700;
+    color:#222;
+}
+
+.logo span{
+    color:#8A5B36;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#555;
+    font-size:16px;
+    font-weight:500;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#8A5B36;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#8A5B36;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-box{
+    width:320px;
+    height:48px;
+    background:#f5f5f5;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    padding:0 18px;
+    border:1px solid transparent;
+    transition:.3s;
+}
+
+.search-box:focus-within{
+    border-color:#8A5B36;
+    box-shadow:0 0 10px rgba(138,91,54,.15);
+}
+
+.search-icon{
+    color:#8A5B36;
+    font-size:18px;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding-left:12px;
+    font-size:15px;
+}
+
+.search-box input::placeholder{
+    color:#999;
+}
+
+/* =========================
+   ICONS
+========================= */
+
+.nav-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.icon{
+    position:relative;
+    font-size:22px;
+    color:#333;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.icon:hover{
+    color:#8A5B36;
+    transform:translateY(-2px);
+}
+
+.badge{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+    background:#ef4444;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:10px;
+    font-weight:600;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn{
+    text-decoration:none;
+    background:#8A5B36;
+    color:#fff;
+
+    padding:12px 22px;
+    border-radius:30px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-weight:600;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#6d4528;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+.search-box{
+    width:220px;
+}
+
+.nav-links{
+    gap:22px;
+}
+
+}
+
+@media(max-width:900px){
+
+.nav-links{
+    display:none;
+}
+
+.search-box{
+    display:none;
+}
+
+.login-btn span{
+    display:none;
+}
+
+.navbar-container{
+    width:95%;
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+    font-size:26px;
+}
+
+.nav-icons{
+    gap:15px;
+}
+
+.icon{
+    font-size:20px;
+}
+
+.login-btn{
+    padding:10px 16px;
+}
+
+}
