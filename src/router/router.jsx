@@ -9,6 +9,7 @@ import Cart from "../pages/public/Cart";
 import Dashboard from "../pages/admin/Dashboard";
 import AddProduct from "../pages/admin/AddProduct";
 import ProtectedRoute from "../components/ProtectedRoute";
+import Login from "../pages/auth/Login";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         element: <Cart />
       }
     ]
+  },
+   {
+    path: "/login",
+    element: <Login />,
   },
 
   {

@@ -1,70 +1,123 @@
 import { useState } from "react";
-import { useAddProduct } from "../../hooks/useAddProduct";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { addProduct } from "../../api/productApi";
+import "../../style/AddProduct.css";
 
 function AddProduct() {
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
+  const queryClient = useQueryClient();
+  const [product, setProduct] = useState({
+    title: "",
+    price: "",
+    category: "",
+    image: "",
+    stock: "",
+  });
+  const addMutation = useMutation({
+    mutationFn: addProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey:["products"]
+      });
+      alert("Product Added Successfully!");
+      setProduct({
+        title:"",
+        price:"",
+        category:"",
+        image:"",
+        stock:"",
+      });
+    }
+  });
 
-  const addMutation = useAddProduct();
+  function handleChange(e){
+    setProduct({
+      ...product,
+      [e.target.name]: e.target.value,
+    });
+  }
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e){
     e.preventDefault();
+    if(
+      !product.title ||
+      !product.price ||
+      !product.category ||
+      !product.image ||
+      !product.stock
+    ){
 
-    const newProduct = {
-      title,
-      price: Number(price),
-      image,
-    };
-
-    addMutation.mutate(newProduct);
-
-    setTitle("");
-    setPrice("");
-    setImage("");
-  };
+      alert("Please fill all fields");
+      return;
+    }
+    addMutation.mutate({
+      ...product,
+      price:Number(product.price),
+      stock:Number(product.stock),
+    });
+  }
 
   return (
-    <div>
-      <h1>Add Product</h1>
+    <div className="add-product-page">
+      <div className="product-form-card">
+        <h1>Add Product</h1>
+        <p>
+          Add a new product to Nexus Store
+        </p>
+        <form 
+        onSubmit={handleSubmit}
+        className="product-form">
 
-      <form onSubmit={handleSubmit}>
-        <input
+          <input
           type="text"
-          placeholder="Product Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+          name="title"
+          placeholder="Product Name"
+          value={product.title}
+          onChange={handleChange}/>
 
-        <br />
-        <br />
-
-        <input
+          <input
           type="number"
+          name="price"
           placeholder="Price"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
+          value={product.price}
+          onChange={handleChange} />
 
-        <br />
-        <br />
-
-        <input
+          <input
           type="text"
+          name="category"
+          placeholder="Category"
+          value={product.category}
+          onChange={handleChange}/>
+
+          <input
+          type="number"
+          name="stock"
+          placeholder="Stock Quantity"
+          value={product.stock}
+          onChange={handleChange}/>
+
+          <input
+          type="text"
+          name="image"
           placeholder="Image URL"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
+          value={product.image}
+          onChange={handleChange} />
 
-        <br />
-        <br />
+          <button 
+          type="submit"
+          disabled={addMutation.isPending}>
 
-        <button type="submit" disabled={addMutation.isPending}>
-          {addMutation.isPending ? "Adding..." : "Add Product"}
-        </button>
-      </form>
+          {
+            addMutation.isPending
+            ?
+            "Adding..."
+            :
+            "Add Product"
+          }
+
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
-
 export default AddProduct;

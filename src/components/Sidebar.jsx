@@ -1,52 +1,61 @@
-import { Link } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import "../style/Sidebar.css";
+
 
 function Sidebar() {
+
+  const navigate = useNavigate();
+
+
+  const handleLogout = () => {
+
+    localStorage.removeItem("isAdmin");
+    localStorage.removeItem("adminEmail");
+
+    navigate("/login");
+
+  };
+
+
   return (
-    <div
-      style={{
-        width: "220px",
-        minHeight: "100vh",
-        background: "#1e293b",
-        color: "white",
-        padding: "20px",
-      }}
-    >
+
+    <aside className="sidebar">
+
+
       <h2>Nexus Admin</h2>
 
-      <hr />
 
-      <p>
-        <Link to="/admin/dashboard" style={{ color: "white" }}>
-          Dashboard
-        </Link>
-      </p>
+      <nav>
 
-      <p>
-        <Link to="/admin/add-product" style={{ color: "white" }}>
-          Add Product
-        </Link>
-      </p>
 
-      {/* <p>
-        <Link to="/admin/products" style={{ color: "white" }}>
-          Products
-        </Link>
-      </p>
+        <NavLink to="/admin/dashboard">
+          🏠 Dashboard
+        </NavLink>
 
-      <p>
-        <Link to="/admin/orders" style={{ color: "white" }}>
-          Orders
-        </Link>
-      </p> */}
-    </div>
+
+
+        <NavLink to="/admin/add-product">
+          ➕ Add Product
+        </NavLink>
+
+
+
+        <button 
+        className="logout-btn"
+        onClick={handleLogout}
+        >
+          🚪 Logout
+        </button>
+
+
+      </nav>
+
+
+    </aside>
+
   );
+
 }
 
+
 export default Sidebar;
-
-
-
-
-
-
-

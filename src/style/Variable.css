@@ -1,0 +1,20 @@
+:root{
+    --primary:#8A5B36;
+    --primary-dark:#6d4528;
+
+    --background:#f8f6f3;
+    --card:#ffffff;
+
+    --text:#222;
+    --text-light:#666;
+
+    --success:#16a34a;
+    --danger:#ef4444;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 20px 45px rgba(0,0,0,.15);
+
+    --radius:22px;
+
+    --transition:.35s ease;
+}

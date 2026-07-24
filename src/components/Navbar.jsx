@@ -1,35 +1,70 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import {
+  FaShoppingCart,
+  FaSearch,
+  FaUser,
+} from "react-icons/fa";
+
+import { CartContext } from "../context/CartContext";
+import "../style/Navbar.css";
 
 function Navbar() {
+  const { state } = useContext(CartContext);
+
+  // Total items in cart
+  const totalItems = state.cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
   return (
-    <nav
-      style={{
-        display: "flex",
-        gap: "20px",
-        padding: "15px",
-        background: "#2563eb",
-      }}
-    >
-      <Link to="/" style={{ color: "white" }}>
-        Home
-      </Link>
+    <header className="navbar">
+      <div className="navbar-container">
 
-      <Link to="/products" style={{ color: "white" }}>
-        Products
-      </Link>
+        {/* Logo */}
+        <Link to="/" className="logo">
+          <span>Nexus</span>Store
+        </Link>
 
-      <Link to="/cart" style={{ color: "white" }}>
-        Cart
-      </Link>
+        {/* Navigation */}
+        <nav className="nav-links">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/products">Shop</NavLink>
+        </nav>
 
-      <Link to="/admin/dashboard" style={{ color: "white" }}>
-        Admin
-      </Link>
-    </nav>
+        {/* Search */}
+        <div className="search-box">
+          <FaSearch className="search-icon" />
+          <input
+            type="text"
+            placeholder="Search products..."
+          />
+        </div>
+
+        {/* Icons */}
+        <div className="nav-icons">
+
+          <Link to="/cart" className="icon">
+            <FaShoppingCart />
+
+            {totalItems > 0 && (
+              <span className="badge">
+                {totalItems}
+              </span>
+            )}
+          </Link>
+
+          <Link to="/login" className="login-btn">
+            <FaUser />
+            <span>Login</span>
+          </Link>
+
+        </div>
+
+      </div>
+    </header>
   );
 }
 
 export default Navbar;
-
-
-
