@@ -1,6 +1,4 @@
-/* ===========================
-   CART PAGE
-=========================== */
+
 
 .cart-page {
     width: 90%;
@@ -8,7 +6,7 @@
     margin: 50px auto;
 }
 
-/* Header */
+
 
 .cart-header {
     margin-bottom: 35px;
@@ -25,7 +23,6 @@
     font-size: 17px;
 }
 
-/* Cart Items */
 
 .cart-items {
     display: flex;
@@ -49,7 +46,7 @@
     border-radius: 12px;
 }
 
-/* Details */
+
 
 .cart-details {
     flex: 1;
@@ -72,7 +69,6 @@
     color: #8A5B36;
 }
 
-/* Quantity */
 
 .quantity {
     display: flex;
@@ -102,7 +98,6 @@
     font-weight: 600;
 }
 
-/* Subtotal */
 
 .subtotal {
     font-size: 22px;
@@ -110,7 +105,7 @@
     color: #222;
 }
 
-/* Remove Button */
+
 
 .remove-btn {
     margin-top: 18px;
@@ -127,7 +122,6 @@
     background: #b3002d;
 }
 
-/* Summary */
 
 .cart-summary {
     margin-top: 40px;
@@ -154,7 +148,7 @@
     font-weight: 700;
 }
 
-/* Checkout Button */
+
 
 .checkout-btn {
     width: 100%;
@@ -174,7 +168,7 @@
     background: #6d4528;
 }
 
-/* Clear Cart Button */
+
 
 .clear-cart-btn {
   display: block;
@@ -197,7 +191,7 @@
     background: linear-gradient(135deg, #c1121f, #9d0208);
 }
 
-/* Empty Cart */
+
 
 .empty-cart {
     min-height: 70vh;
@@ -219,7 +213,7 @@
     color: #666;
 }
 
-/* Responsive */
+
 
 @media (max-width: 768px) {
     .cart-item {
