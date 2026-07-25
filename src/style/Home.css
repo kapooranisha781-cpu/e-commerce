@@ -397,8 +397,41 @@ body {
     background: #8a5b36;
     color: white;
     transform: translateY(-8px);
-} 
+}  
+.section-title {
+    text-align: center;
+    margin: 70px 0 50px;
+}
 
+.section-title h2 {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #8a5b36, #d4a373);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 2px;
+    background: #8a5b36;
+}
+
+.section-title h2::before {
+    left: -90px;
+}
+
+.section-title h2::after {
+    right: -90px;
+}
 /* OFFER */
 
 .offer-banner {

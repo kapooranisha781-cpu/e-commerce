@@ -69,10 +69,7 @@ function Cart() {
             dispatch({
               type: "CLEAR_CART",
             })
-          }
-        >
-          Clear Cart
-        </button>
+          }> Clear Cart </button>
       </div>
     </section>
   );
