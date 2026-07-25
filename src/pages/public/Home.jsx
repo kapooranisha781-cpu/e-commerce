@@ -101,9 +101,7 @@ function Home() {
               <h2>4.9★</h2>
               <p>Customer Rating</p>
             </div>
-
           </div>
-
         </div>
 
         {/* Right Side */}
@@ -113,7 +111,6 @@ function Home() {
           {/* Main Image */}
 
           <div className="main-image">
-
             <img
               src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=900"
               alt="Laptop"
@@ -124,39 +121,25 @@ function Home() {
           {/* Card 1 */}
 
           <div className="floating-product top-card">
-
             <img
               src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"
-              alt="iPhone"
-            />
-
+              alt="iPhone" />
             <div>
-
               <h4>iPhone 16 Pro</h4>
-
               <p>₹79,999</p>
-
             </div>
-
           </div>
 
           {/* Card 2 */}
 
           <div className="floating-product bottom-card">
-
             <img
               src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300"
-              alt="Headphones"
-            />
-
+              alt="Headphones" />
             <div>
-
               <h4>AirPods Max</h4>
-
               <p>30% OFF</p>
-
             </div>
-
           </div>
 
           {/* Card 3 */}
@@ -165,31 +148,20 @@ function Home() {
 
             <img
               src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"
-              alt="Watch"
-            />
-
+              alt="Watch"/>
             <div>
-
               <h4>Apple Watch</h4>
-
               <p>₹34,999</p>
-
             </div>
-
           </div>
 
           {/* Discount Circle */}
 
           <div className="discount-circle">
-
             <h2>50%</h2>
-
             <span>OFF</span>
-
           </div>
-
         </div>
-
       </section>
 
       {/* ================= CATEGORIES ================= */}
@@ -221,11 +193,8 @@ function Home() {
       {/* ================= OFFER BANNER ================= */}
 
       <section className="offer-banner">
-
         <div className="offer-content">
-
           <span>LIMITED TIME OFFER</span>
-
           <h2>
             Summer Tech Sale
           </h2>
@@ -238,9 +207,7 @@ function Home() {
           <Link to="/products" className="offer-btn">
             Shop Now
           </Link>
-
         </div>
-
       </section>
 
 
@@ -249,29 +216,22 @@ function Home() {
       <section className="home-featured">
 
         <div className="home-section-header">
-
           <div>
             <span className="home-small-title">
               FEATURED COLLECTION
             </span>
-
             <h2>Fashion & Technology</h2>
           </div>
-
           <Link to="/products">View All →</Link>
-
         </div>
-
         <div className="home-featured-grid">
 
           {/* Large Card */}
 
           <div className="home-featured-card home-large">
-
             <img
               src="https://m.media-amazon.com/images/I/61Nsqbn8i7L._AC_SL3840_.jpg"
-              alt="Phones"
-            />
+              alt="Phones" />
 
             <div className="home-overlay">
               <h3>Premium Smartphones</h3>
@@ -284,17 +244,14 @@ function Home() {
           {/* Card 2 */}
 
           <div className="home-featured-card">
-
             <img
               src="https://i.pinimg.com/1200x/fe/f7/b3/fef7b3cbaeb59afc974ab04dd20741e6.jpg"
-              alt="Laptop"
-            />
+              alt="Laptop" />
 
             <div className="home-overlay">
               <h3>Latest Laptops</h3>
               <Link to="/products">Explore</Link>
             </div>
-
           </div>
 
           {/* Card 3 */}
