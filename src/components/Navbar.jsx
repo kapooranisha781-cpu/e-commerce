@@ -38,8 +38,7 @@ function Navbar() {
           <FaSearch className="search-icon" />
           <input
             type="text"
-            placeholder="Search products..."
-          />
+            placeholder="Search products..." />
         </div>
 
         {/* Icons */}
@@ -61,7 +60,6 @@ function Navbar() {
           </Link>
 
         </div>
-
       </div>
     </header>
   );

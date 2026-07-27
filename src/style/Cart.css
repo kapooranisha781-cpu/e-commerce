@@ -1,35 +1,25 @@
-
-
 .cart-page {
     width: 90%;
     max-width: 1200px;
     margin: 50px auto;
 }
-
-
-
 .cart-header {
     margin-bottom: 35px;
 }
-
 .cart-header h1 {
     font-size: 40px;
     color: #222;
     margin-bottom: 8px;
 }
-
 .cart-header p {
     color: #666;
     font-size: 17px;
 }
-
-
 .cart-items {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-
 .cart-item {
     display: flex;
     gap: 30px;
@@ -38,7 +28,6 @@
     padding: 25px;
     box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
-
 .cart-item img {
     width: 220px;
     height: 180px;
@@ -46,37 +35,29 @@
     border-radius: 12px;
 }
 
-
-
 .cart-details {
     flex: 1;
 }
-
 .cart-details h2 {
     font-size: 30px;
     margin-bottom: 10px;
     color: #222;
 }
-
 .brand {
     color: #777;
     margin-bottom: 10px;
 }
-
 .price {
     font-size: 24px;
     font-weight: 700;
     color: #8A5B36;
 }
-
-
 .quantity {
     display: flex;
     align-items: center;
     gap: 18px;
     margin: 20px 0;
 }
-
 .quantity button {
     width: 42px;
     height: 42px;
@@ -88,25 +69,18 @@
     cursor: pointer;
     transition: .3s;
 }
-
 .quantity button:hover {
     background: #6d4528;
 }
-
 .quantity span {
     font-size: 20px;
     font-weight: 600;
 }
-
-
 .subtotal {
     font-size: 22px;
     font-weight: bold;
     color: #222;
 }
-
-
-
 .remove-btn {
     margin-top: 18px;
     padding: 12px 25px;
@@ -117,12 +91,9 @@
     cursor: pointer;
     transition: .3s;
 }
-
 .remove-btn:hover {
     background: #b3002d;
 }
-
-
 .cart-summary {
     margin-top: 40px;
     background: #fff;
@@ -147,9 +118,6 @@
     font-size: 22px;
     font-weight: 700;
 }
-
-
-
 .checkout-btn {
     width: 100%;
     margin-top: 20px;
@@ -167,9 +135,6 @@
 .checkout-btn:hover {
     background: #6d4528;
 }
-
-
-
 .clear-cart-btn {
   display: block;
     margin: 25px auto;
@@ -190,9 +155,6 @@
     transform: translateY(-3px);
     background: linear-gradient(135deg, #c1121f, #9d0208);
 }
-
-
-
 .empty-cart {
     min-height: 70vh;
     display: flex;
@@ -213,27 +175,21 @@
     color: #666;
 }
 
-
-
 @media (max-width: 768px) {
     .cart-item {
         flex-direction: column;
         text-align: center;
     }
-
     .cart-item img {
         width: 100%;
         height: 240px;
     }
-
     .quantity {
         justify-content: center;
     }
-
     .summary-row {
         font-size: 16px;
     }
-
     .cart-header h1 {
         font-size: 32px;
     }

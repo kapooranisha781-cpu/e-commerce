@@ -39,10 +39,7 @@ function CartItem({ item }) {
                   quantity: item.quantity - 1,
                 },
               })
-            }
-          >
-            -
-          </button>
+            }> - </button>
 
           <span>{item.quantity}</span>
 
@@ -54,11 +51,8 @@ function CartItem({ item }) {
                   id: item.id,
                   quantity: item.quantity + 1,
                 },
-              })
-            }
-          >
-            +
-          </button>
+              }) }
+          > + </button>
 
         </div>
 
@@ -73,12 +67,8 @@ function CartItem({ item }) {
             dispatch({
               type: "REMOVE_FROM_CART",
               payload: item.id,
-            })
-          }
-        >
-          Remove
-        </button>
-
+            }) } >
+          Remove  </button>
       </div>
 
     </div>

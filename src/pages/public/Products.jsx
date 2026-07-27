@@ -92,7 +92,6 @@ function Products() {
         )}
 
       </div>
-
     </section>
   );
 }

@@ -267,79 +267,62 @@ body {
     transform: translateY(-6px);
 }
 
-
 /* RESPONSIVE */
 
 @media(max-width:992px) {
-
     .hero {
         flex-direction: column;
         text-align: center;
     }
-
     .hero-buttons,
     .hero-stats {
         justify-content: center;
     }
-
     .hero-search {
         margin: auto;
         margin-bottom: 35px;
     }
-
     .top-card,
     .middle-card,
     .bottom-card,
     .discount-circle {
         display: none;
     }
-
     .hero-left h1 {
         font-size: 50px;
     }
-
 }
 
 @media(max-width:768px) {
-
     .hero-left h1 {
         font-size: 40px;
     }
-
     .main-image img {
         height: 420px;
     }
-
     .hero-search {
         flex-direction: column;
         border-radius: 20px;
     }
-
     .hero-search input {
         width: 100%;
     }
-
     .hero-search button {
         width: 100%;
         margin-top: 10px;
     }
-
 }
 
 @media(max-width:480px) {
-
     .hero-left h1 {
         font-size: 32px;
     }
-
     .hero-left p {
         font-size: 16px;
     }
-
     .stat-box {
         width: 100%;
     }
-
     .main-image img {
         height: 320px;
     }
@@ -429,6 +412,7 @@ body {
 .section-title h2::after {
     right: -90px;
 }
+
 /* OFFER */
 
 .offer-banner {

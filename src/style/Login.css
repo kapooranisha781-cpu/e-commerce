@@ -152,47 +152,27 @@ body{
 .login-btn{
     padding:14px;
 }
-
 }
-
 
 /* Back Button */
 /* Back To Home Button */
 
 .back-btn {
-
     width:100%;
-
     margin-top:15px;
-
     padding:12px;
-
     border-radius:10px;
-
     border:2px solid #2563eb;
-
     background:white;
-
     color:#2563eb;
-
     font-size:15px;
-
     font-weight:600;
-
     cursor:pointer;
-
     transition:0.3s;
-
 }
 
-
-
 .back-btn:hover {
-
     background:#2563eb;
-
     color:white;
-
     transform:translateY(-2px);
-
 }
