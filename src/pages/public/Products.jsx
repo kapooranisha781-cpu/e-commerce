@@ -10,7 +10,6 @@ import "../../style/Products.css";
 
 function Products() {
   const [search, setSearch] = useState("");
-
   const debouncedSearch = useDebounce(search, 500);
 
   const {
