@@ -128,17 +128,17 @@
     },
     {
       "id": 10,
-      "title": "Leather Handbag",
-      "brand": "Michael Kors",
-      "category": "Women's Accessories",
-      "price": 7999,
-      "discount": 18,
-      "rating": 4.8,
-      "reviews": 1215,
-      "stock": 20,
-      "description": "Premium leather handbag with spacious compartments and elegant finish.",
-      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-      "featured": true
+      "title": "Mini White Crossbody Bag",
+      "brand": "ChicStreet",
+      "category": "Handbags",
+      "price": 1699,
+      "discount": 15,
+      "rating": 4.3,
+      "reviews": 175,
+      "stock": 25,
+      "description": "A compact white crossbody bag for travel and everyday outings.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqDvQlDWB1pNjwLOg_8Loc6i-PgNAXOZeBWGfLFVqpcQ&s",
+      "featured": false
     },
     {
       "id": 11,
@@ -711,7 +711,7 @@
       "reviews": 320,
       "stock": 25,
       "description": "Classic black high heels for parties and formal occasions.",
-      "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600",
+      "image": "https://m.media-amazon.com/images/I/41qCwI0wYCL._AC_UY1000_.jpg",
       "featured": true
     },
     {
@@ -725,7 +725,7 @@
       "reviews": 185,
       "stock": 30,
       "description": "Comfortable nude block heels for everyday styling.",
-      "image": "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-o9YkgN1h18KezGd69frL8IquuWx4EE3qi5tw-sOEEq--VK374hB-CCU&s=10",
       "featured": false
     },
     {
@@ -739,7 +739,7 @@
       "reviews": 410,
       "stock": 12,
       "description": "Glamorous golden stilettos for weddings and parties.",
-      "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600",
+      "image": "https://www.aroundalways.com/cdn/shop/products/Olivia-Sandals-1.jpg?v=1748330517",
       "featured": true
     },
     {
@@ -753,7 +753,7 @@
       "reviews": 210,
       "stock": 20,
       "description": "Stylish pink strappy heels for evening outings.",
-      "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmeTJOJdDsbN_7sKIc5TIyQ09fFG5hFgCc_lh7xdxcPU5Q4BneN2gkEcBP&s=10",
       "featured": false
     },
     {
@@ -767,7 +767,7 @@
       "reviews": 295,
       "stock": 16,
       "description": "Modern white platform heels with a bold silhouette.",
-      "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfS0Bql2hJECC3gyiZIZT4H6zqWpnEczxqlcziz1AK-Q&s=10",
       "featured": true
     },
     {
@@ -781,7 +781,7 @@
       "reviews": 145,
       "stock": 35,
       "description": "Versatile brown wedge heels for casual wear.",
-      "image": "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=600",
+      "image": "https://assets.myntassets.com/w_200,q_50,,dpr_3,fl_progressive,f_webp/assets/images/2026/AUGUST/2/qLh1kXPW_792808431dd54ed19d3b69b02f09b9c5.jpg",
       "featured": false
     },
     {
@@ -795,7 +795,7 @@
       "reviews": 380,
       "stock": 14,
       "description": "Statement red heels designed for parties and celebrations.",
-      "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600",
+      "image": "https://i.pinimg.com/736x/4b/06/92/4b069203081043223b75b4eba6871fc7.jpg",
       "featured": true
     },
     {
@@ -809,7 +809,7 @@
       "reviews": 240,
       "stock": 18,
       "description": "Elegant silver heels for evening events and celebrations.",
-      "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600",
+      "image": "https://cdn.salla.sa/RvPxw/832e9809-51dc-4329-9bfb-b1ac25bdb52b-750x1000-i6hVjCSN79k6AR0kp3Ha7rYGEmHyWw2uCe25pEzR.jpg",
       "featured": false
     },
     {
@@ -823,7 +823,7 @@
       "reviews": 165,
       "stock": 27,
       "description": "Minimal beige kitten heels for office and casual outfits.",
-      "image": "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4xjgIWrzJddIB_Vk59tT0cdWVkera2iZWUqppZAPLwG4SjZv6kHYZlW0D&s=10",
       "featured": false
     },
     {
@@ -837,7 +837,7 @@
       "reviews": 330,
       "stock": 10,
       "description": "Floral embellished heels for weddings and festive occasions.",
-      "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsoZPsGSqvrkzED5zqh0mQcloSGK9gIjVY3JCD-g5UmBfZbap-dLwLUAc&s=10",
       "featured": true
     },
     {
@@ -851,7 +851,7 @@
       "reviews": 420,
       "stock": 20,
       "description": "A timeless black handbag with space for everyday essentials.",
-      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDqHJpKVL8Zjxoz0k7KCdcLWc_Sp1CsvvJuVTSMu-HlqLNC3cUPmeRHg&s=10",
       "featured": true
     },
     {
@@ -865,7 +865,7 @@
       "reviews": 510,
       "stock": 15,
       "description": "A spacious brown tote bag suitable for work and shopping.",
-      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxg1UQv9XDXJbhf6wO5sG00IO6a0Ix-UsZCWocgaVdIKS136YteuKjGw&s=10",
       "featured": true
     },
     {
@@ -879,7 +879,7 @@
       "reviews": 190,
       "stock": 32,
       "description": "A cute pink shoulder bag for outings and casual events.",
-      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
+      "image": "https://images.meesho.com/images/products/1042947334/zfw88_512.webp?width=512",
       "featured": false
     },
     {
@@ -893,7 +893,7 @@
       "reviews": 350,
       "stock": 22,
       "description": "A versatile beige tote for everyday essentials and office use.",
-      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
+      "image": "https://m.media-amazon.com/images/I/51xE5Xl5wvL._AC_UY1000_.jpg",
       "featured": true
     },
     {
@@ -907,7 +907,7 @@
       "reviews": 275,
       "stock": 18,
       "description": "A quilted sling bag with a chain strap for stylish outings.",
-      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
+      "image": "https://images.meesho.com/images/products/341944237/yt8ge_512.webp?width=512",
       "featured": true
     },
     {
@@ -921,7 +921,7 @@
       "reviews": 230,
       "stock": 17,
       "description": "A structured cream handbag with an elegant minimalist design.",
-      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
+      "image": "https://images.meesho.com/images/products/990596509/fhnmr_512.webp?width=512",
       "featured": false
     },
     {
@@ -935,7 +935,7 @@
       "reviews": 140,
       "stock": 28,
       "description": "A lightweight denim tote for shopping and casual everyday use.",
-      "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
+      "image": "https://images.meesho.com/images/products/1059688057/sddqp_512.webp?width=512",
       "featured": false
     },
     {
@@ -949,22 +949,22 @@
       "reviews": 310,
       "stock": 13,
       "description": "A sophisticated burgundy clutch for parties and formal events.",
-      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
+      "image": "https://images.meesho.com/images/products/924677471/ryeyn_512.jpg",
       "featured": true
     },
     {
       "id": 69,
-      "title": "Mini White Crossbody Bag",
-      "brand": "ChicStreet",
-      "category": "Handbags",
-      "price": 1699,
-      "discount": 15,
-      "rating": 4.3,
-      "reviews": 175,
-      "stock": 25,
-      "description": "A compact white crossbody bag for travel and everyday outings.",
+      "title": "Leather Handbag",
+      "brand": "Michael Kors",
+      "category": "Women's Accessories",
+      "price": 7999,
+      "discount": 18,
+      "rating": 4.8,
+      "reviews": 1215,
+      "stock": 20,
+      "description": "Premium leather handbag with spacious compartments and elegant finish.",
       "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600",
-      "featured": false
+      "featured": true
     },
     {
       "id": 70,
@@ -977,7 +977,7 @@
       "reviews": 460,
       "stock": 16,
       "description": "A premium tan shoulder bag with a refined everyday design.",
-      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
+      "image": "https://rukminim3.flixcart.com/image/480/640/xif0q/sling-bag/g/a/i/women-s-premium-golden-tan-brown-tote-bag-1-10-gtb1-shoulder-bag-original-imahzygfcgshhxpt.jpeg?q=80",
       "featured": true
     },
     {
@@ -991,7 +991,7 @@
       "reviews": 450,
       "stock": 28,
       "description": "A floral midi dress perfect for summer outings and vacations.",
-      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2VDp8lJbCbY5TBWuxWQzEZl3Ryh1nZp9D7ntw0ncpAqHSVQ4AjSuqxc0G&s=10",
       "featured": true
     },
     {
@@ -1005,7 +1005,7 @@
       "reviews": 610,
       "stock": 14,
       "description": "An elegant black evening dress for dinners and special events.",
-      "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyn4UPBGfyTmo-oe_9Af4ZTS2iShWjiKuaI4-Qbx1kBA&s",
       "featured": true
     },
     {
@@ -1019,7 +1019,7 @@
       "reviews": 195,
       "stock": 32,
       "description": "A relaxed pink shirt dress for casual everyday styling.",
-      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTORh3JPY7bIw8fUlWGPsgxC18AhwRL-btH_YLmXqfV4darbpHismOKoVE&s=10",
       "featured": false
     },
     {
@@ -1033,7 +1033,7 @@
       "reviews": 340,
       "stock": 19,
       "description": "A flowing blue floral maxi dress for holidays and celebrations.",
-      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600",
+      "image": "https://images.meesho.com/images/products/973637410/hi9m3_512.webp?width=512",
       "featured": true
     },
     {
@@ -1047,7 +1047,7 @@
       "reviews": 280,
       "stock": 21,
       "description": "A stylish red bodycon dress designed for parties and evening events.",
-      "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600",
+      "image": "https://img201.savana.com/goods-pic/de76dfbec6bc4f829652bc6150788a0a_w540_h720_q85.webp",
       "featured": true
     },
     {
@@ -1061,7 +1061,7 @@
       "reviews": 215,
       "stock": 26,
       "description": "A breathable white cotton midi dress for warm-weather comfort.",
-      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR31F_t4aByet9H6ycX0TfX_ZzT2lfu6lpmEj8BpqkDL7wDPMvarG9YHnc1&s=10",
       "featured": false
     },
     {
@@ -1075,7 +1075,7 @@
       "reviews": 365,
       "stock": 17,
       "description": "A lavender pleated dress for brunches and special occasions.",
-      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600",
+      "image": "https://www.missmosa.in/cdn/shop/files/Terry_Pleated_Luxe_Summer_Dress_1.jpg?v=1782309513",
       "featured": true
     },
     {
@@ -1089,7 +1089,7 @@
       "reviews": 180,
       "stock": 23,
       "description": "A flattering green wrap dress with a comfortable fit.",
-      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9BU68kivHLa_wlwTX04EyGvo_MQjk7cNi9GwxE_lChtP-zspK9n3vFf4&s=10",
       "featured": false
     },
     {
@@ -1103,7 +1103,7 @@
       "reviews": 290,
       "stock": 15,
       "description": "A refined beige midi dress suitable for formal occasions.",
-      "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSb1gOrI8J-jJPTZ_t2-7cnMVtR4warP6rky8fSHedzA&s",
       "featured": false
     },
     {
@@ -1117,7 +1117,7 @@
       "reviews": 255,
       "stock": 34,
       "description": "A cheerful yellow sundress for summer days and outdoor trips.",
-      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR36YV4lciH_pANmA_mati2mJ0kH6R2ALEwyPbbm6OwhWOq15Ag-_kmqwo&s=10",
       "featured": true
     },
     {
@@ -1131,7 +1131,7 @@
       "reviews": 340,
       "stock": 40,
       "description": "A versatile white cotton top for casual everyday outfits.",
-      "image": "https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600",
+      "image": "https://www.only.in/cdn/shop/files/902385401_g2_373e4d0a-b381-42e1-9210-5e4c696d8fb6.jpg?v=1771999104&width=1080",
       "featured": false
     },
     {
@@ -1145,7 +1145,7 @@
       "reviews": 285,
       "stock": 24,
       "description": "A chic satin top for dinners, parties, and evening outings.",
-      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600",
+      "image": "https://www.only.in/cdn/shop/files/902385401_g2_373e4d0a-b381-42e1-9210-5e4c696d8fb6.jpg?v=1771999104&width=1080",
       "featured": true
     },
     {
@@ -1159,7 +1159,7 @@
       "reviews": 160,
       "stock": 45,
       "description": "A trendy striped crop top for casual looks and weekends.",
-      "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDW02Znq9LL8wh0_BohmRDr9XkI5xBvzVJo8bnToOY6p-L3AafZhnsXM&s=10",
       "featured": false
     },
     {
@@ -1173,7 +1173,7 @@
       "reviews": 220,
       "stock": 30,
       "description": "A feminine pink puff sleeve top for casual and smart outfits.",
-      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiGqLFU1tlNskaSlfaT313ctOvJ2puVaH9AHgsN86Wuw&s=10",
       "featured": true
     },
     {
@@ -1187,7 +1187,7 @@
       "reviews": 145,
       "stock": 38,
       "description": "A simple black sleeveless top that pairs well with jeans and skirts.",
-      "image": "https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyi9-qxgAuPwmO4gpeTtj5ku6ffxA8nWZbTvULfE8aSw&s",
       "featured": false
     },
     {
@@ -1201,7 +1201,7 @@
       "reviews": 275,
       "stock": 22,
       "description": "A casual denim shirt top for relaxed everyday styling.",
-      "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600",
+      "image": "https://i.pinimg.com/736x/5c/40/73/5c4073044da904478e2b2f9c9de23b70.jpg",
       "featured": true
     },
     {
@@ -1215,7 +1215,7 @@
       "reviews": 310,
       "stock": 26,
       "description": "A floral blouse with a fresh design for everyday and office wear.",
-      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600",
+      "image": "https://i.pinimg.com/1200x/38/57/6d/38576ddf68fb527dcd7cd23d9ddebca3.jpg",
       "featured": true
     },
     {
@@ -1229,7 +1229,7 @@
       "reviews": 185,
       "stock": 33,
       "description": "A comfortable beige ribbed top for simple modern outfits.",
-      "image": "https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600",
+      "image": "https://i.pinimg.com/736x/7e/51/81/7e51819ca20e17e1ef68cf9b899870ac.jpg",
       "featured": false
     },
     {
@@ -1243,7 +1243,7 @@
       "reviews": 205,
       "stock": 29,
       "description": "A versatile green blouse for casual outings and everyday wear.",
-      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600",
+      "image": "https://i.pinimg.com/1200x/02/88/86/0288865ab8460e106b7888830cece018.jpg",
       "featured": false
     },
     {
@@ -1257,7 +1257,7 @@
       "reviews": 365,
       "stock": 18,
       "description": "A bold purple top designed to elevate party and evening outfits.",
-      "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600",
+      "image": "https://i.pinimg.com/736x/f3/56/74/f356743d79b78e91f0a32368fa8c1392.jpg",
       "featured": true
     },
     {
@@ -1271,7 +1271,7 @@
       "reviews": 350,
       "stock": 30,
       "description": "Classic white sneakers for comfortable everyday wear.",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
+      "image": "https://i.pinimg.com/736x/e5/50/e5/e550e55a7d74b3b2c9156203c4af372a.jpg",
       "featured": true
     },
     {
@@ -1285,7 +1285,7 @@
       "reviews": 430,
       "stock": 24,
       "description": "Lightweight running shoes designed for daily workouts and walks.",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
+      "image": "https://i.pinimg.com/736x/e1/a6/e3/e1a6e32e2aae52b5c6aa3cd42dc993f4.jpg",
       "featured": false
     },
     {
@@ -1299,7 +1299,7 @@
       "reviews": 190,
       "stock": 35,
       "description": "Easy-to-wear tan flats for daily activities and casual outings.",
-      "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600",
+      "image": "https://i.pinimg.com/1200x/1f/b0/45/1fb045fb78e29998584f86865057134e.jpg",
       "featured": false
     },
     {
@@ -1313,7 +1313,7 @@
       "reviews": 270,
       "stock": 50,
       "description": "Elegant pearl earrings for everyday styling and special occasions.",
-      "image": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600",
+      "image": "https://i.pinimg.com/736x/1a/65/83/1a6583a1c17d79e37cd884fbb57e385b.jpg",
       "featured": true
     },
     {
@@ -1327,7 +1327,7 @@
       "reviews": 315,
       "stock": 32,
       "description": "A delicate gold plated necklace for a polished everyday look.",
-      "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600",
+      "image": "https://i.pinimg.com/736x/6d/4d/20/6d4d20fec52b642c78c9d8a3c7ac7eec.jpg",
       "featured": true
     },
     {
@@ -1341,7 +1341,7 @@
       "reviews": 480,
       "stock": 19,
       "description": "A rose gold wristwatch with a stylish design for everyday wear.",
-      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600",
+      "image": "https://i.pinimg.com/736x/62/b1/92/62b192642878103f340b9e8321822d7a.jpg",
       "featured": true
     },
     {
@@ -1355,7 +1355,7 @@
       "reviews": 230,
       "stock": 40,
       "description": "Classic black sunglasses for outdoor outings and travel.",
-      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600",
+      "image": "https://i.pinimg.com/736x/c7/ed/40/c7ed40a801f3a84e886312c43b22e91c.jpg",
       "featured": false
     },
     {
@@ -1383,7 +1383,7 @@
       "reviews": 290,
       "stock": 36,
       "description": "A minimalist gold-tone bracelet for casual and formal styling.",
-      "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600",
+      "image": "https://i.pinimg.com/1200x/cb/a8/83/cba883ebc67aa10416d721f0544c4d09.jpg",
       "featured": true
     },
     {
@@ -1397,7 +1397,7 @@
       "reviews": 390,
       "stock": 21,
       "description": "A practical and stylish backpack for college, work, and travel.",
-      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600",
+      "image": "https://i.pinimg.com/736x/ac/18/8e/ac188edf4c073e08a5fa7d87544c5992.jpg",
       "featured": true
     }
   ]
