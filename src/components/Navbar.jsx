@@ -1,3 +1,4 @@
+
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
@@ -10,47 +11,51 @@ import { CartContext } from "../context/CartContext";
 import "../style/Navbar.css";
 
 function Navbar() {
-  const { state } = useContext(CartContext);
+  const context = useContext(CartContext);
 
-  // Total items in cart
-  const totalItems = state.cart.reduce(
-    (sum, item) => sum + item.quantity,
+  if (!context) {
+    throw new Error(
+      "CartContext is unavailable. Check the CartProvider import and wrapper."
+    );
+  }
+
+  const { cart = [] } = context;
+
+  const totalItems = cart.reduce(
+    (sum, item) => sum + (Number(item.quantity) || 0),
     0
   );
 
   return (
     <header className="navbar">
       <div className="navbar-container">
-
-        {/* Logo */}
         <Link to="/" className="logo">
           <span>Nexus</span>Store
         </Link>
 
-        {/* Navigation */}
         <nav className="nav-links">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/products">Shop</NavLink>
         </nav>
 
-        {/* Search */}
         <div className="search-box">
           <FaSearch className="search-icon" />
           <input
             type="text"
-            placeholder="Search products..." />
+            placeholder="Search products..."
+            aria-label="Search products"
+          />
         </div>
 
-        {/* Icons */}
         <div className="nav-icons">
-
-          <Link to="/cart" className="icon">
+          <Link
+            to="/cart"
+            className="icon"
+            aria-label={`Shopping cart, ${totalItems} items`}
+          >
             <FaShoppingCart />
-
             {totalItems > 0 && (
-              <span className="badge">
-                {totalItems}
-              </span>
+              <span className="badge">{totalItems}</span>
             )}
           </Link>
 
@@ -58,7 +63,6 @@ function Navbar() {
             <FaUser />
             <span>Login</span>
           </Link>
-
         </div>
       </div>
     </header>

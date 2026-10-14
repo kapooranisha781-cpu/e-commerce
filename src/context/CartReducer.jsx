@@ -1,72 +1,74 @@
-export const initialState = {
-  cart: [],
-};
 
-export function cartReducer(state, action) {
+function CartReducer(state, action) {
   switch (action.type) {
     case "ADD_TO_CART": {
-      const existingItem = state.cart.find(
-        (item) => item.id === action.payload.id
+      const product = action.payload;
+
+      if (!product || product.id == null) return state;
+
+      const stock = Math.max(0, Number(product.stock) || 0);
+
+      if (stock < 1) return state;
+
+      const existingItem = state.find(
+        (item) => String(item.id) === String(product.id)
       );
 
-      // If item already exists, increase quantity
       if (existingItem) {
-        return {
-          ...state,
-          cart: state.cart.map((item) =>
-            item.id === action.payload.id
-              ? {
-                  ...item,
-                  quantity: item.quantity + 1,
-                }
-              : item
-          ),
-        };
+        return state.map((item) => {
+          if (String(item.id) !== String(product.id)) {
+            return item;
+          }
+
+          return {
+            ...item,
+            quantity: Math.min(item.quantity + 1, item.stock),
+          };
+        });
       }
 
-      // Add new item
-      return {
+      return [
         ...state,
-        cart: [
-          ...state.cart,
-          {
-            ...action.payload,
-            quantity: 1,
-          },
-        ],
-      };
+        {
+          ...product,
+          price: Number(product.price) || 0,
+          stock,
+          quantity: 1,
+        },
+      ];
     }
 
-    case "UPDATE_QUANTITY":
-      return {
-        ...state,
-        cart: state.cart
-          .map((item) =>
-            item.id === action.payload.id
-              ? {
-                  ...item,
-                  quantity: action.payload.quantity,
-                }
-              : item
-          )
-          .filter((item) => item.quantity > 0),
-      };
+    case "UPDATE_QUANTITY": {
+      const { id, quantity } = action.payload;
+
+      return state
+        .map((item) => {
+          if (String(item.id) !== String(id)) return item;
+
+          const requestedQuantity = Math.floor(Number(quantity));
+
+          return {
+            ...item,
+            quantity: Math.min(
+              Math.max(1, requestedQuantity || 1),
+              item.stock
+            ),
+          };
+        })
+        .filter((item) => item.stock > 0);
+    }
 
     case "REMOVE_FROM_CART":
-      return {
-        ...state,
-        cart: state.cart.filter(
-          (item) => item.id !== action.payload
-        ),
-      };
+      return state.filter(
+        (item) => String(item.id) !== String(action.payload)
+      );
 
     case "CLEAR_CART":
-      return {
-        ...state,
-        cart: [],
-      };
+      return [];
 
     default:
       return state;
   }
 }
+
+export default CartReducer;

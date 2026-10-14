@@ -1,68 +1,237 @@
-.add-product-page{
-    min-height:100vh;
-    background:#f5f7fb;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
-}
-.product-form-card{
-    width:500px;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:
-    0 15px 35px rgba(0,0,0,0.08);
-}
-.product-form-card h1{
+/* ==========================================
+   NEXUS STORE — ADD PRODUCT PAGE
+   Premium Brown & Cream Theme
+========================================== */
 
-    font-size:30px;
-    color:#111827;
-    margin-bottom:8px;
+/* Page Layout */
+
+.add-product-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 45px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: linear-gradient(135deg, #f8f5f1, #eee5dc);
 }
-.product-form-card p{
-    color:#6b7280;
-    margin-bottom:25px;
+
+/* Form Card */
+
+.product-form-card {
+  width: 100%;
+  max-width: 680px;
+  padding: 36px;
+
+  background: #ffffff;
+  border: 1px solid #eee3d8;
+  border-radius: 20px;
+
+  box-shadow: 0 12px 35px rgba(75, 48, 29, 0.09);
 }
-.product-form{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+
+/* Heading */
+
+.product-form-card h1 {
+  margin: 0 0 10px;
+
+  color: #392a20;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
 }
-.product-form input{
-    padding:14px 16px;
-    border:1px solid #d1d5db;
-    border-radius:10px;
-    font-size:15px;
-    outline:none;
-    transition:.3s;
+
+/* Subtitle */
+
+.product-form-card > p {
+  margin: 0 0 28px;
+
+  color: #81746a;
+  font-size: 15px;
+  line-height: 1.6;
 }
-.product-form input:focus{
-    border-color:#2563eb;
-    box-shadow:
-    0 0 0 3px rgba(37,99,235,.15);
+
+/* Form Layout */
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.product-form button{
-    margin-top:10px;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#2563eb;
-    color:white;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+
+/* Input Fields */
+
+.product-form input,
+.product-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+
+  color: #33271f;
+  background: #fdfcfb;
+
+  border: 1px solid #ded3c8;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
-.product-form button:hover{
-    background:#1d4ed8;
+
+/* Placeholder */
+
+.product-form input::placeholder,
+.product-form textarea::placeholder {
+  color: #a0958b;
+  opacity: 1;
 }
-.product-form button:disabled{
-    background:#9ca3af;
-    cursor:not-allowed;
+
+/* Focus Effect */
+
+.product-form input:focus,
+.product-form textarea:focus {
+  background: #ffffff;
+  border-color: #895b38;
+  box-shadow: 0 0 0 3px rgba(137, 91, 56, 0.13);
 }
-@media(max-width:600px){
-.product-form-card{
-    width:100%;
+
+/* Description Field */
+
+.product-form textarea {
+  min-height: 115px;
+  resize: vertical;
 }
+
+/* Number Input */
+
+.product-form input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.product-form input[type="number"]::-webkit-inner-spin-button,
+.product-form input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/* Add Product Button */
+
+.product-form button {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 6px;
+  padding: 14px 18px;
+
+  color: #ffffff;
+  background: #895b38;
+
+  border: none;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 12px rgba(105, 67, 39, 0.12);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Button Hover */
+
+.product-form button:hover:not(:disabled) {
+  background: #684126;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(105, 67, 39, 0.18);
+}
+
+/* Keyboard Focus */
+
+.product-form button:focus-visible {
+  outline: 3px solid #d8b99c;
+  outline-offset: 3px;
+}
+
+/* Disabled / Loading State */
+
+.product-form button:disabled {
+  color: #f5f0eb;
+  background: #b9a493;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablets */
+
+@media (max-width: 768px) {
+  .add-product-page {
+    padding: 30px 18px;
+  }
+
+  .product-form-card {
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 17px;
+  }
+
+  .product-form-card h1 {
+    font-size: 27px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .add-product-page {
+    padding: 22px 12px;
+  }
+
+  .product-form-card {
+    padding: 22px 17px;
+    border-radius: 15px;
+  }
+
+  .product-form-card h1 {
+    font-size: 25px;
+  }
+
+  .product-form-card > p {
+    margin-bottom: 23px;
+    font-size: 14px;
+  }
+
+  .product-form {
+    gap: 13px;
+  }
+
+  .product-form input,
+  .product-form textarea {
+    padding: 13px 12px;
+    font-size: 14px;
+  }
+
+  .product-form button {
+    min-height: 47px;
+    font-size: 14px;
+  }
 }

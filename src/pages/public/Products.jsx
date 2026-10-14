@@ -21,13 +21,23 @@ function Products() {
     queryFn: getProducts,
   });
 
-  const filteredProducts = products.filter(({ title, brand, category }) => {
-    const keyword = debouncedSearch.toLowerCase();
+  // Deleted products ko public Products page par hide karo
+  const activeProducts = products.filter(
+    (product) => product.isDeleted !== true
+  );
+
+  // Search active products mein hi hoga
+  const keyword = debouncedSearch.trim().toLowerCase();
+
+  const filteredProducts = activeProducts.filter((product) => {
+    const title = String(product.title || "").toLowerCase();
+    const brand = String(product.brand || "").toLowerCase();
+    const category = String(product.category || "").toLowerCase();
 
     return (
-      title.toLowerCase().includes(keyword) ||
-      brand.toLowerCase().includes(keyword) ||
-      category.toLowerCase().includes(keyword)
+      title.includes(keyword) ||
+      brand.includes(keyword) ||
+      category.includes(keyword)
     );
   });
 
@@ -50,9 +60,7 @@ function Products() {
 
   return (
     <section className="products-page">
-
       <div className="products-header">
-
         <span className="products-tag">
           Premium Collection
         </span>
@@ -69,12 +77,10 @@ function Products() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-
       </div>
 
       <div className="products-grid">
-
-        {filteredProducts.length ? (
+        {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
@@ -83,13 +89,19 @@ function Products() {
           ))
         ) : (
           <div className="empty-products">
-            <h2>No Products Found</h2>
+            <h2>
+              {activeProducts.length === 0
+                ? "No Products Available"
+                : "No Products Found"}
+            </h2>
+
             <p>
-              Try searching with another keyword.
+              {activeProducts.length === 0
+                ? "Please check back later for new products."
+                : "Try searching with another keyword."}
             </p>
           </div>
         )}
-
       </div>
     </section>
   );

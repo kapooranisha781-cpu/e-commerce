@@ -1,95 +1,131 @@
+
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import "../style/ProductCard.css";
 
 function ProductCard({ product }) {
-  const { state, dispatch } = useContext(CartContext);
+  const context = useContext(CartContext);
 
-  // Check if product is already in cart
-  const isAdded = state.cart.some(
-    (item) => item.id === product.id
+  if (!context) {
+    throw new Error(
+      "ProductCard must be rendered inside CartProvider"
+    );
+  }
+
+  const { cart, dispatch } = context;
+
+  const isAdded = cart.some(
+    (item) => String(item.id) === String(product.id)
   );
 
+  // Safely handle price
+  const price = Math.max(0, Number(product.price) || 0);
+
+  // Keep discount between 0 and 100
+  const discount = Math.min(
+    100,
+    Math.max(0, Number(product.discount) || 0)
+  );
+
+  // Calculate discounted price
   const discountedPrice = Math.round(
-    product.price - (product.price * product.discount) / 100
+    price - (price * discount) / 100
+  );
+
+  // Safely handle stock
+  const stock = Math.max(
+    0,
+    Math.floor(Number(product.stock) || 0)
   );
 
   const handleAddToCart = () => {
-    if (isAdded) return;
+    if (isAdded || stock <= 0) return;
 
     dispatch({
       type: "ADD_TO_CART",
-      payload: product,
+      payload: {
+        ...product,
+        price: discountedPrice,
+        stock,
+      },
     });
   };
 
   return (
     <div className="product-card">
-
       <div className="image-box">
         <img
-          src={product.image}
-          alt={product.title}
+          src={product.image || "/placeholder.png"}
+          alt={product.title || "Product"}
           className="product-image"
+          loading="lazy"
         />
       </div>
 
       <div className="product-content">
-
         <span className="category">
-          {product.category}
+          {product.category || "General"}
         </span>
 
-        <h2>{product.title}</h2>
+        <h2>{product.title || "Untitled Product"}</h2>
 
-        <p className="brand">
-          {product.brand}
-        </p>
+        {product.brand && (
+          <p className="brand">{product.brand}</p>
+        )}
 
-        <p className="description">
-          {product.description}
-        </p>
+        {product.description && (
+          <p className="description">
+            {product.description}
+          </p>
+        )}
 
         <p className="rating">
-          ⭐ {product.rating} ({product.reviews} Reviews)
+          ⭐ {Number(product.rating) || 0} (
+          {Number(product.reviews) || 0} Reviews)
         </p>
 
         <div className="price-section">
-
           <span className="new-price">
-            ₹{discountedPrice.toLocaleString()}
+            ₹{discountedPrice.toLocaleString("en-IN")}
           </span>
 
-          <span className="old-price">
-            ₹{product.price.toLocaleString()}
-          </span>
+          {discount > 0 && (
+            <>
+              <span className="old-price">
+                ₹{price.toLocaleString("en-IN")}
+              </span>
 
-          <span className="discount">
-            {product.discount}% OFF
-          </span>
-
+              <span className="discount">
+                {discount}% OFF
+              </span>
+            </>
+          )}
         </div>
 
         <p className="stock">
-          {product.stock > 0
-            ? `Only ${product.stock} left`
-            : "Out of Stock"}
+          {stock > 0 ? `Only ${stock} left` : "Out of Stock"}
         </p>
 
         <button
+          type="button"
           className={`add-cart ${isAdded ? "added" : ""}`}
           onClick={handleAddToCart}
-          disabled={product.stock === 0 || isAdded}
+          disabled={stock <= 0 || isAdded}
+          aria-label={
+            stock <= 0
+              ? `${product.title || "Product"} is out of stock`
+              : isAdded
+              ? `${product.title || "Product"} is already in cart`
+              : `Add ${product.title || "product"} to cart`
+          }
         >
-          {product.stock === 0
+          {stock <= 0
             ? "Out of Stock"
             : isAdded
             ? "✓ Added"
             : "Add to Cart"}
         </button>
-
       </div>
-
     </div>
   );
 }

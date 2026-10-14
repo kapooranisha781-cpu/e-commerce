@@ -1,0 +1,330 @@
+/* =====================================
+   NEXUS STORE — CART ITEM
+   Spacious Brown & Cream Design
+===================================== */
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  height: 100%;
+  padding: 22px;
+  background: #fffdf9;
+  border: 1px solid #eee2d5;
+  border-radius: 16px;
+  box-shadow: 0 5px 16px rgba(45, 29, 18, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(45, 29, 18, 0.1);
+}
+
+/* Larger Product Image */
+
+.cart-item img {
+  width: 190px;
+  height: 210px;
+  flex-shrink: 0;
+  object-fit: contain;
+  padding: 10px;
+  background: #f8f2e9;
+  border-radius: 12px;
+}
+
+/* Product Details */
+
+.cart-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-details h2 {
+  margin: 0 0 10px;
+  color: #392a20;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.cart-brand {
+  margin: 0 0 8px;
+  color: #8a7564;
+  font-size: 14px;
+}
+
+.cart-price {
+  margin: 9px 0;
+  color: #6d4528;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cart-discount {
+  margin: 7px 0;
+  color: #25804b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cart-stock {
+  margin: 6px 0;
+  color: #75675c;
+  font-size: 13px;
+}
+
+
+/* =====================================
+   QUANTITY CONTROLS — PREMIUM STYLE
+===================================== */
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px 0;
+  padding: 5px 7px;
+  background: #fffaf3;
+  border: 1px solid #dfcbb7;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(57, 42, 32, 0.06);
+}
+
+/* Plus and Minus Buttons */
+
+.quantity button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid #e8d8c7;
+  border-radius: 9px;
+  background: #f1e3d3;
+  color: #6d4528;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+
+.quantity button:hover:not(:disabled) {
+  background: #895b38;
+  color: #ffffff;
+  border-color: #895b38;
+  box-shadow: 0 3px 8px rgba(109, 69, 40, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Click Effect */
+
+.quantity button:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+/* Disabled Button */
+
+.quantity button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Quantity Number */
+
+.quantity span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  color: #392a20;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Keyboard Accessibility */
+
+.quantity button:focus-visible {
+  outline: 2px solid #c49a75;
+  outline-offset: 3px;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .quantity {
+    gap: 12px;
+    padding: 4px 6px;
+  }
+
+  .quantity button {
+    width: 32px;
+    height: 32px;
+    font-size: 21px;
+  }
+
+  .quantity span {
+    min-width: 22px;
+    font-size: 16px;
+  }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .quantity button {
+    transition: none;
+  }
+
+  .quantity button:hover:not(:disabled),
+  .quantity button:active:not(:disabled) {
+    transform: none;
+  }
+}
+
+
+/* Subtotal */
+
+.subtotal {
+  margin: 10px 0;
+  color: #392a20;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Remove Button */
+
+.remove-btn {
+  margin-top: 5px;
+  padding: 9px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #f8e6e2;
+  color: #a83229;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #f1d1ca;
+}
+
+.remove-btn:focus-visible {
+  outline: 2px solid #c49a75;
+  outline-offset: 3px;
+}
+
+/* Medium Screens */
+
+@media (max-width: 1050px) {
+  .cart-item {
+    gap: 15px;
+    padding: 16px;
+  }
+
+  .cart-item img {
+    width: 125px;
+    height: 150px;
+  }
+
+  .cart-details h2 {
+    font-size: 16px;
+  }
+
+  .cart-price {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .cart-item {
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .cart-item img {
+    width: 115px;
+    height: 140px;
+  }
+
+  .cart-details h2 {
+    font-size: 16px;
+  }
+
+  .cart-brand {
+    font-size: 13px;
+  }
+
+  .cart-price {
+    font-size: 15px;
+  }
+}
+
+/* Small Phones */
+
+@media (max-width: 380px) {
+  .cart-item {
+    gap: 10px;
+    padding: 11px;
+  }
+
+  .cart-item img {
+    width: 90px;
+    height: 115px;
+  }
+
+  .cart-details h2 {
+    font-size: 14px;
+  }
+
+  .cart-price {
+    font-size: 13px;
+  }
+
+  .quantity {
+    gap: 10px;
+    padding: 5px 8px;
+  }
+
+  .subtotal {
+    font-size: 13px;
+  }
+
+  .remove-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-item,
+  .remove-btn {
+    transition: none;
+  }
+
+  .cart-item:hover {
+    transform: none;
+  }
+}

@@ -1,88 +1,338 @@
-/* ===========================
-   ADMIN SIDEBAR
-=========================== */
+/* ==========================================
+   NEXUS STORE — RESPONSIVE ADMIN SIDEBAR
+   Premium Brown & Cream Theme
+========================================== */
 
 .sidebar {
-    width:260px;
-    height:100vh;
-    position:fixed;
-    left:0;
-    top:0;
-    background:#111827;
-    color:white;
-    padding:25px 20px;
-    display:flex;
-    flex-direction:column;
-    box-shadow:
-    5px 0 20px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  width: 260px;
+  height: 100vh;
+  height: 100dvh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 18px;
+  overflow-y: auto;
+
+  color: #ffffff;
+  background: linear-gradient(180deg, #392a20 0%, #251b15 100%);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 5px 0 25px rgba(45, 29, 18, 0.12);
+
+  transition: transform 0.3s ease;
 }
 
 /* Logo */
 
 .sidebar h2 {
-    font-size:26px;
-    text-align:center;
-    margin-bottom:40px;
-    letter-spacing:1px;
-    color:#60a5fa;
+  margin: 0 0 38px;
+  padding: 0 5px;
+
+  color: #e6c5a6;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
 /* Navigation */
 
 .sidebar nav {
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
 }
 
-.sidebar a {
-    text-decoration:none;
-    color:#d1d5db;
-    padding:14px 18px;
-    border-radius:12px;
-    font-size:16px;
-    transition:.3s;
+/* Navigation Links */
+
+.sidebar nav a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 14px 16px;
+
+  color: #e5d9cf;
+  background: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.sidebar a:hover {
-    background:#1f2937;
-    color:white;
+.sidebar nav a span,
+.sidebar .logout-btn span {
+  flex-shrink: 0;
+}
+
+/* Hover */
+
+.sidebar nav a:hover {
+  color: #ffffff;
+  background: rgba(230, 197, 166, 0.12);
+  border-color: rgba(230, 197, 166, 0.12);
+  transform: translateX(3px);
 }
 
 /* Active Link */
 
-.sidebar a.active {
-
-    background:#2563eb;
-    color:white;
-    font-weight:600;
+.sidebar nav a.active {
+  color: #ffffff;
+  background: #895b38;
+  border-color: #a77955;
+  font-weight: 700;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
 }
 
 /* Logout Button */
 
-.logout-btn {
-    margin-top:20px;
-    padding:14px 18px;
-    border:none;
-    border-radius:12px;
-    background:#dc2626;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-    text-align:left;
-    transition:.3s;
+.sidebar .logout-btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 16px;
+
+  color: #ffddd8;
+  background: rgba(185, 56, 45, 0.15);
+
+  border: 1px solid rgba(255, 150, 140, 0.2);
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.logout-btn:hover {
-    background:#b91c1c;
-    transform:translateX(5px);
+.sidebar .logout-btn:hover {
+  color: #ffffff;
+  background: #b9382d;
+  transform: translateX(3px);
 }
 
-/* Responsive */
+/* Sidebar Footer */
 
-@media(max-width:900px){
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-.sidebar {
-    width:220px;
+  margin-top: auto;
+  padding: 24px 8px 0;
+
+  color: #e6c5a6;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
 }
+
+.sidebar-footer span {
+  color: #b8a496;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Keyboard Accessibility */
+
+.sidebar a:focus-visible,
+.sidebar .logout-btn:focus-visible,
+.sidebar-menu-btn:focus-visible,
+.sidebar-overlay:focus-visible {
+  outline: 3px solid #e6c5a6;
+  outline-offset: 3px;
+}
+
+/* Mobile Menu Button — Hidden on Desktop */
+
+.sidebar-menu-btn {
+  display: none;
+
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1003;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: #392a20;
+
+  border: 1px solid #895b38;
+  border-radius: 10px;
+
+  font-size: 23px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(37, 27, 21, 0.2);
+}
+
+/* Overlay — Hidden on Desktop */
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;
+    padding: 25px 14px;
+  }
+
+  .sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar nav a,
+  .sidebar .logout-btn {
+    padding: 13px 12px;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: min(280px, 85vw);
+    max-width: 100%;
+    padding: 75px 16px 24px;
+
+    transform: translateX(-105%);
+    visibility: hidden;
+    pointer-events: none;
+
+    box-shadow: none;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar nav {
+    gap: 10px;
+  }
+
+  .sidebar nav a,
+  .sidebar .logout-btn {
+    padding: 13px 12px;
+    font-size: 14px;
+  }
+
+  /* Show Menu Button */
+
+  .sidebar-menu-btn {
+    display: flex;
+  }
+
+  /* Dark Overlay */
+
+  .sidebar-overlay {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    background: rgba(20, 14, 10, 0.55);
+    border: none;
+    cursor: pointer;
+  }
+
+  .sidebar-footer {
+    padding-top: 30px;
+  }
+}
+
+/* ==========================================
+   SHORT SCREENS
+========================================== */
+
+@media (max-height: 500px) {
+  .sidebar {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+
+  .sidebar nav {
+    gap: 7px;
+  }
+
+  .sidebar nav a,
+  .sidebar .logout-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .sidebar-footer {
+    padding-top: 20px;
+  }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar nav a,
+  .sidebar .logout-btn {
+    transition: none;
+  }
 }

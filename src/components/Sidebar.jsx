@@ -1,38 +1,87 @@
+import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../style/Sidebar.css";
 
 function Sidebar() {
-
+  const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const handleLogout = () => {
 
+  const handleLogout = () => {
     localStorage.removeItem("isAdmin");
     localStorage.removeItem("adminEmail");
-
+    setIsOpen(false);
     navigate("/login");
   };
+
+  const handleNavigation = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <aside className="sidebar">
+    <>
+      {/* Mobile Menu Button */}
+      <button
+        type="button"
+        className="sidebar-menu-btn"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={isOpen}
+        aria-controls="admin-sidebar"
+      >
+        {isOpen ? "✕" : "☰"}
+      </button>
 
-      <h2>Nexus Admin</h2>
-      <nav>
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <button
+          type="button"
+          className="sidebar-overlay"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close navigation menu"
+        />
+      )}
 
-        <NavLink to="/admin/dashboard">
-          🏠 Dashboard
-        </NavLink>
+      {/* Sidebar */}
+      <aside
+        id="admin-sidebar"
+        className={`sidebar ${isOpen ? "sidebar-open" : ""}`}
+      >
+        <h2>Nexus Admin</h2>
 
-        <NavLink to="/admin/add-product">
-          ➕ Add Product
-        </NavLink>
+        <nav>
+          <NavLink
+            to="/admin/dashboard"
+            onClick={handleNavigation}
+          >
+            <span>🏠</span>
+            Dashboard
+          </NavLink>
 
-        <button 
-        className="logout-btn"
-        onClick={handleLogout}
-        >
-          🚪 Logout
-        </button>
-      </nav>
-    </aside>
+          <NavLink
+            to="/admin/add-product"
+            onClick={handleNavigation}
+          >
+            <span>➕</span>
+            Add Product
+          </NavLink>
+
+          <button
+            type="button"
+            className="logout-btn"
+            onClick={handleLogout}
+          >
+            <span>🚪</span>
+            Logout
+          </button>
+        </nav>
+
+        <div className="sidebar-footer">
+          Nexus Store
+          <span>Admin Panel</span>
+        </div>
+      </aside>
+    </>
   );
 }
+
 export default Sidebar;

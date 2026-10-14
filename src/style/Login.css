@@ -1,178 +1,273 @@
-/* ===========================
-   LOGIN PAGE
-=========================== */
+/* ==========================================
+   NEXUS STORE — ADMIN LOGIN
+   Premium Brown & Cream Theme
+========================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+/* Page Layout */
+
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #f8f5f1 0%,
+    #eee3d8 50%,
+    #f7f3ee 100%
+  );
 }
 
-body{
-    background:#f5f7fa;
+/* Login Card */
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 38px 35px;
+
+  background: #ffffff;
+  border: 1px solid #eee3d8;
+  border-radius: 20px;
+
+  box-shadow: 0 18px 45px rgba(65, 42, 26, 0.12);
+
+  animation: loginFadeIn 0.45s ease;
 }
 
-.login-container{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
-    background:linear-gradient(135deg,#f8f6f3,#eef2f7);
+/* Card Animation */
+
+@keyframes loginFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.login-card{
-    width:100%;
-    max-width:430px;
-    background:#fff;
-    padding:45px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    text-align:center;
+/* Heading */
 
-}
-.login-card h1{
-    font-size:34px;
-    color:#222;
-    margin-bottom:10px;
+.login-card h1 {
+  margin: 0 0 12px;
+
+  color: #392a20;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
 }
 
-.login-card p{
-    color:#666;
-    margin-bottom:35px;
-    font-size:15px;
+/* Subtitle */
+
+.login-card > p {
+  margin: 0 0 30px;
+
+  color: #81746a;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
 }
 
-/* ===========================
-   INPUTS
-=========================== */
+/* Login Form */
 
-.input-group{
-    margin-bottom:20px;
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.input-group input{
-    width:100%;
-    padding:16px 18px;
-    border:1px solid #ddd;
-    border-radius:12px;
-    font-size:15px;
-    outline:none;
-    transition:.3s;
-    background:#fafafa;
+/* Input Groups */
+
+.input-group {
+  width: 100%;
 }
 
-.input-group input:focus{
-    border-color:#8A5B36;
-    box-shadow:0 0 0 4px rgba(138,91,54,.15);
-    background:#fff;
+/* Input Fields */
+
+.input-group input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: 14px 16px;
+
+  color: #392a20;
+  background: #fdfbf9;
+
+  border: 1px solid #ded3c8;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
-.input-group input::placeholder{
-    color:#999;
+/* Placeholder */
+
+.input-group input::placeholder {
+  color: #a0958b;
+  opacity: 1;
 }
 
-/* ===========================
-   LOGIN BUTTON
-=========================== */
+/* Input Focus */
 
-.login-btn{
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    background:#8A5B36;
-    color:#fff;
-    font-size:17px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+.input-group input:focus {
+  background: #ffffff;
+  border-color: #895b38;
+  box-shadow: 0 0 0 3px rgba(137, 91, 56, 0.13);
 }
 
-.login-btn:hover{
-    background:#6d4528;
-    transform:translateY(-2px);
+/* Buttons — Shared */
+
+.login-card .login-btn,
+.login-card .back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 16px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* Login Button */
 
-.login-footer{
-    margin-top:30px;
-    color:#888;
-    font-size:14px;
-    border-top:1px solid #eee;
-    padding-top:20px;
+.login-card .login-btn {
+  margin-top: 3px;
+
+  color: #ffffff;
+  background: #895b38;
+  border: 1px solid #895b38;
+
+  box-shadow: 0 5px 12px rgba(105, 67, 39, 0.13);
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media(max-width:768px){
-
-.login-card{
-    padding:30px 25px;
+.login-card .login-btn:hover {
+  background: #684126;
+  border-color: #684126;
+  box-shadow: 0 8px 17px rgba(105, 67, 39, 0.2);
+  transform: translateY(-2px);
 }
 
-.login-card h1{
-    font-size:28px;
+/* Back to Home Button */
+
+.login-card .back-btn {
+  color: #79502f;
+  background: #ffffff;
+  border: 1px solid #d9c5b3;
 }
 
-.login-card p{
-    font-size:14px;
+.login-card .back-btn:hover {
+  color: #684126;
+  background: #f8f1e9;
+  border-color: #b99576;
+  transform: translateY(-1px);
 }
 
-.login-btn{
-    font-size:16px;
+/* Keyboard Accessibility */
+
+.login-card button:focus-visible {
+  outline: 3px solid #d8b99c;
+  outline-offset: 3px;
 }
 
+/* Footer */
+
+.login-footer {
+  margin-top: 28px;
+  padding-top: 20px;
+
+  color: #998a7e;
+  border-top: 1px solid #eee6de;
+
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
 }
 
-@media(max-width:480px){
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
 
-.login-container{
-    padding:20px;
+@media (max-width: 480px) {
+  .login-container {
+    padding: 22px 14px;
+  }
+
+  .login-card {
+    max-width: 400px;
+    padding: 30px 22px;
+    border-radius: 16px;
+  }
+
+  .login-card h1 {
+    font-size: 26px;
+  }
+
+  .login-card > p {
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+
+  .login-card form {
+    gap: 15px;
+  }
+
+  .input-group input {
+    min-height: 47px;
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+
+  .login-card .login-btn,
+  .login-card .back-btn {
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  .login-footer {
+    margin-top: 24px;
+    padding-top: 17px;
+  }
 }
 
-.login-card{
-    padding:25px 20px;
-}
+/* Reduced Motion Accessibility */
 
-.login-card h1{
-    font-size:24px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .login-card {
+    animation: none;
+  }
 
-.input-group input{
-    padding:14px;
-}
-
-.login-btn{
-    padding:14px;
-}
-}
-
-/* Back Button */
-/* Back To Home Button */
-
-.back-btn {
-    width:100%;
-    margin-top:15px;
-    padding:12px;
-    border-radius:10px;
-    border:2px solid #2563eb;
-    background:white;
-    color:#2563eb;
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.back-btn:hover {
-    background:#2563eb;
-    color:white;
-    transform:translateY(-2px);
+  .login-card button {
+    transition: none;
+  }
 }
